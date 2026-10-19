@@ -12,8 +12,6 @@ def matrix_normalization(matrix: list, axis=None, norm_type: str = "l2") -> np.n
         norm = np.sqrt(np.sum(matrix ** 2, axis=axis, keepdims=True))
     elif norm_type == "max":
         norm = np.max(np.abs(matrix), axis=axis, keepdims=True)
-    # else:
-    #     raise ValueError("norm_type must be 'l1', 'l2', or 'max'")
 
     norm = np.where(norm == 0, 1, norm)
 
