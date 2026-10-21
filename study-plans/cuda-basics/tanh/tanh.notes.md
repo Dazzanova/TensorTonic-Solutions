@@ -1,0 +1,1 @@
+Direct formula :  output[i] = tanhf(input[i])
